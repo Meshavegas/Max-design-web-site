@@ -10,22 +10,22 @@ const socials = [
 
 export const Footer = () => {
   return (
-    <div className="w-full px-4 flex items-start gap-4 flex-col md:items-center md:flex-row  justify-between my-6">
+    <div className="w-full px-4 flex items-start gap-4 flex-col md:items-center md:flex-row  justify-between mt-6 bg-light   h-14">
       <div className="flex items-center">
-        <h1 className="text-dark-grey text-md font-bold underline underline-offset-8 ">
+        <h1 className="text-white text-md font-bold underline underline-offset-8 ">
           <a href="/">Max Design</a>
         </h1>
       </div>
-      <di>
-        <h1>
+      <div>
+        <h1 className="text-white">
           <a href="">©Dr. Vegas - 2023</a>
         </h1>
-      </di>
+      </div>
       <ul className="flex items-center gap-4">
         {!!socials?.length &&
           socials.map(({ name, Icon, url }, index) => (
             <li key={index + name}>
-              <a href={url} target="_blank" className="text-dark-grey">
+              <a href={url} target="_blank" className="text-white">
                 <Icon />
               </a>
             </li>

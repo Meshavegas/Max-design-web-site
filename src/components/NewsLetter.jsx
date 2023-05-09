@@ -3,7 +3,10 @@ import coffeeFour from "../assets/coffee-four.png";
 
 export const NewsLetter = () => {
   return (
-    <div className="flex items-start gap-2 p-4 bg-white flex-col md:flex-row">
+    <div
+      className="flex items-start gap-2 p-4 bg-white flex-col md:flex-row"
+      id="contact"
+    >
       <div className="hidden md:block p-4 w-full   ">
         <img
           className="m-auto md:h-[100%] object-cover rounded-md overflow-hidden"

@@ -4,29 +4,33 @@ import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
 import { NavBar } from "./components/NavBar";
 import { NewsLetter } from "./components/NewsLetter";
+import Loader from "./components/loader/Loader";
 
 function App() {
   return (
-    <div className="">
+    <div className="  ">
       <NavBar />
       <Hero rating={4} />
 
-      <section className="bg-light-100">
+      <section className="bg-light-100" id="services">
         <div className="flex items-center flex-col ">
           <h1 className="text-dark-grey font-bold text-lg  py-3 md:text-6xl">
             Nos Services
           </h1>
           <p className="text-light-grey text-sm mb-4">
-            Nos Offres et services son diverse et Variée
+            Nos Offres et services son diverses et Variés
           </p>
         </div>
         <CoffeeCard />
       </section>
 
-      <section className="flex justify-between bg-light-100 flex-col-reverse md:flex-row">
+      <section
+        className="flex justify-between bg-light-100 flex-col-reverse md:flex-row"
+        id="realisations"
+      >
         <div className="p-4 w-full">
           <h1 className="text-dark-grey font-bold text-lg  py-3 md:text-6xl capitalize">
-            Commenter ce qui vous plait et recever une reponsse
+            Promotions🥳🥳🥳 Commander des maintenant!!
           </h1>
           <p className="text-light-grey text-sm py-4">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque iusto
@@ -35,7 +39,7 @@ function App() {
             suscipit? Accusamus, cupiditate?
           </p>
           <button className="bg-orange text-white p-3 rounded-lg px-4 uppercase my-2 w-full md:w-auto ">
-            Voirs Plus
+            Commander
           </button>
         </div>
         <div className="p-6 w-full">

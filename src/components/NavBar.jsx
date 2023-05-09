@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import { BsCart3, BsSuitHeart, BsSearch } from "react-icons/bs";
 import { MdOutlineClose } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
+import { HashLink as Lik } from "react-router-hash-link";
 
 const navLinks = [
   { name: "Home", to: "/" },
-  { name: "Services", to: "/cafe" },
-  { name: "Réalisations", to: "/news" },
-  { name: "Partenaires", to: "/partenaires" },
-  { name: "Contacts", to: "/contact" },
+  { name: "Services", to: "#services" },
+  { name: "Réalisations", to: "#realisations" },
+  { name: "Partenaires", to: "#partenaires" },
+  { name: "Contacts", to: "#contact" },
 ];
 
 export const NavBar = () => {

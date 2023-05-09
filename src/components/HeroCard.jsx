@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { images } from "../data/images";
+import Loader from "./loader/Loader";
 const HeroCard = () => {
   const [state, setState] = useState(null);
 
@@ -63,9 +64,7 @@ const HeroCard = () => {
           ))}
         </Swiper>
       ) : (
-        <div className="text-center font-bold text-orange uppercase">
-          Loading...
-        </div>
+        <Loader />
       )}
     </div>
   );
@@ -75,11 +74,11 @@ const Card = ({ url, id, price, rating, reviews }) => {
   return (
     <div className="relative w-full  screen h-full bg-light-100">
       <img src={url} alt={id} className="w-full" />
-      <h1 className="md:text-center absolute h-28 lg:bottom-1/2 mx-1 text-2xl font-bold bg-light opacity-80 text-white align-middle flex justify-center">
+      {/* <h1 className="md:text-center absolute h-28 lg:bottom-1/2 mx-1 text-2xl font-bold bg-light opacity-80 text-white align-middle flex justify-center">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur quam,
         nam aspernatur veritatis fuga deleniti exercitationem animi aliquam
         similique obcaecati.
-      </h1>
+      </h1> */}
     </div>
   );
 };

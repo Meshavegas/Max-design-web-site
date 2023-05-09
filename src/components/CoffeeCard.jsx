@@ -47,7 +47,9 @@ export const CoffeeCard = () => {
               ? 1
               : screenSize >= 768 && screenSize < 1024
               ? 2
-              : 3
+              : screenSize <= 1024
+              ? 3
+              : 4
           }
           navigation={true}
           autoplay={{
