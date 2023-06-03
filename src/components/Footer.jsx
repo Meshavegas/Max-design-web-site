@@ -1,5 +1,6 @@
 import React from "react";
 import { BsYoutube, BsTwitter, BsFacebook, BsInstagram } from "react-icons/bs";
+import logo from "../assets/logo.png";
 
 const socials = [
   { name: "Facebook", Icon: BsFacebook, url: "https://facebook.com" },
@@ -10,10 +11,12 @@ const socials = [
 
 export const Footer = () => {
   return (
-    <div className="w-full px-4 flex items-start gap-4 flex-col md:items-center md:flex-row  justify-between mt-6 bg-light   h-14">
+    <div className="w-full px-4 flex items-start gap-4 flex-col md:items-center md:flex-row  justify-between mt-6 bg-light   h-24">
       <div className="flex items-center">
         <h1 className="text-white text-md font-bold underline underline-offset-8 ">
-          <a href="/">Max Design</a>
+          <a href="/">
+            <img src={logo} className="w-24" />
+          </a>
         </h1>
       </div>
       <div>

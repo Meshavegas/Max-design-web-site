@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper";
-
+import { ImWhatsapp } from "react-icons/im";
+import { BiMailSend } from "react-icons/bi";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -75,7 +76,7 @@ export const CoffeeCard = () => {
   );
 };
 
-const Card = ({ title, image, description, price, rating, reviews }) => {
+const Card = ({ title, image, description, price, rating, reviews, lien }) => {
   return (
     <div className="px-2 py-10 relative w-full bg-light-100">
       <div className="bg-white rounded-xl p-4 flex flex-col px-10">
@@ -91,7 +92,16 @@ const Card = ({ title, image, description, price, rating, reviews }) => {
         <h1 className="text-dark-grey font-bold text-sm md:text-md lg:text-xl mt-[3rem]">
           {title}
         </h1>
-        <p className="text-light-grey text-sm py-4">{description}</p>
+        <p className="text-light-grey text-sm py-4">
+          <ul>
+            {description.map((data, index) => (
+              <li key={index} className="ml-3 font-bold flex items-center">
+                <div className="w-3 h-3 bg-orange rounded-r-full"></div>
+                <div className="ml-2">{data}</div>
+              </li>
+            ))}
+          </ul>
+        </p>
 
         <div className="flex justify-between items-center w-full">
           <div className="flex gap-2">
@@ -101,24 +111,21 @@ const Card = ({ title, image, description, price, rating, reviews }) => {
           <p className="text-dark-grey">XAF {price}</p>
         </div>
         <div className="flex justify-center my-2">
-          <button className="w-full md:w-[50%] bg-orange text-white p-3 rounded-lg px-4 uppercase flex">
-            Commander
-          </button>
-          <button className="w-full md:w-[50%] bg-light text-white ml-3 p-3 rounded-lg px-4 uppercase flex hover:text-black hover:bg-white">
-            Voir Plus{" "}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                fillRule="evenodd"
-                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </button>
+          <a
+            href="#contact"
+            className="w-full md:w-[50%] bg-orange text-white p-3 rounded-lg px-4 uppercase flex hover:bg-light"
+          >
+            {" "}
+            Commander par mail <BiMailSend className="w-full h-full md:w-12" />
+          </a>
+          <a
+            href={lien}
+            className="w-full md:w-[50%] bg-light text-white ml-3 p-3 rounded-lg px-4 uppercase flex   hover:bg-orange"
+            target="_blank"
+          >
+            Commander par whatsApp
+            <ImWhatsapp className="w-full h-full md:w-12" />
+          </a>
         </div>
       </div>
     </div>

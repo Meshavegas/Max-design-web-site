@@ -24,6 +24,11 @@ export const NewsLetter = () => {
             Tout belle histoire commence pas un petit message.
           </p>
           <input
+            placeholder="Enter your name"
+            type="text"
+            className="form-input px-4 mb-3 py-3 rounded-xl w-full border-2  border-orange focus:border-none focus:outline-none"
+          />
+          <input
             placeholder="Enter your email"
             type="text"
             className="form-input px-4 py-3 rounded-xl w-full border-2  border-orange focus:border-none focus:outline-none"

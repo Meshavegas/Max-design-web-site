@@ -5,6 +5,8 @@ import { Hero } from "./components/Hero";
 import { NavBar } from "./components/NavBar";
 import { NewsLetter } from "./components/NewsLetter";
 import Loader from "./components/loader/Loader";
+import Realisation from "./components/Realisation";
+import "./index.css";
 
 function App() {
   return (
@@ -23,11 +25,26 @@ function App() {
         </div>
         <CoffeeCard />
       </section>
+      <section className="bg-light-100 z-30" id="realisations">
+        <div className="flex items-center flex-col ">
+          <h1 className="text-dark-grey font-bold text-lg  py-3 md:text-6xl">
+            Réalisations
+          </h1>
+        </div>
+        <div className="flex w-full justify-between pl-24 pr-24 mb-4 md:flex-row flex-col">
+          <div className="text-dark-grey text-6xl font-bold text-center">
+            <div>Nombre De Clients</div>
+            <div className="text-7xl">1000+</div>
+          </div>
+          <div className="text-dark-grey text-6xl font-bold text-center">
+            <div>Nombre De Projet</div>
+            <div className="text-7xl">2500+</div>
+          </div>
+        </div>
+        <Realisation />
+      </section>
 
-      <section
-        className="flex justify-between bg-light-100 flex-col-reverse md:flex-row"
-        id="realisations"
-      >
+      <section className="flex justify-between bg-light-100 flex-col-reverse md:flex-row">
         <div className="p-4 w-full">
           <h1 className="text-dark-grey font-bold text-lg  py-3 md:text-6xl capitalize">
             Promotions🥳🥳🥳 Commander des maintenant!!

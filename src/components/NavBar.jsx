@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { BsCart3, BsSuitHeart, BsSearch } from "react-icons/bs";
 import { MdOutlineClose } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
-import { HashLink as Lik } from "react-router-hash-link";
+import logo from "../assets/logo.png";
 
 const navLinks = [
   { name: "Home", to: "/" },
@@ -20,10 +20,12 @@ export const NavBar = () => {
   const currentRoute = window.location.pathname;
 
   return (
-    <div className=" w-full bg-light h-[80px] relative">
+    <div className="sticky top-0 w-full bg-light h-[80px] z-50">
       <div className="flex justify-between items-center h-full px-4">
         <h1 className="flex items-center text-lg font-bold underline underline-offset-8 text-white">
-          <a href="/">Max Design</a>
+          <a href="/" className="bg-white">
+            <img src={logo} alt="logo" className="h-20 w-24" />
+          </a>
         </h1>
         <ul className="hidden md:flex items-center gap-4">
           {navLinks.map(({ name, to }) => (
@@ -40,8 +42,14 @@ export const NavBar = () => {
 
         <div className="hidden md:flex items-center gap-6">
           <div className="flex items-center   text-white text-xl bg-orange p-3 rounded-full hover:bg-white hover:text-black focus:outline-none">
-            Contacter
-            <BsCart3 />
+            <a
+              href="https://wa.me/237677899380?text=Bonjour+*max+Design*+depuis+votre+site"
+              className="flex"
+              target="_blank"
+            >
+              Contacter
+              <BsCart3 />
+            </a>
           </div>
           <div className="rounded"></div>
         </div>
@@ -76,8 +84,14 @@ export const NavBar = () => {
           </ul>
           <div className="mt-4 md:hidden flex items-center justify-between gap-6">
             <div className="flex items-center   text-white text-xl bg-orange p-3 rounded-full hover:bg-white hover:text-black focus:outline-none">
-              Contacter
-              <BsCart3 />
+              <a
+                href="https://wa.me/237677899380?text=Bonjour+*max+Design*+depuis+votre+site"
+                target="_blank"
+                className="flex"
+              >
+                Contacter
+                <BsCart3 />
+              </a>
             </div>
           </div>
         </div>
