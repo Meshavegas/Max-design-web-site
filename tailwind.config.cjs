@@ -20,7 +20,11 @@ module.exports = {
       red: "#850000",
       black: "#000",
     },
-    extend: {},
+    extend: {
+      aspectRatio: {
+        "4/3": "4 / 3",
+      },
+    },
   },
   plugins: [],
 };

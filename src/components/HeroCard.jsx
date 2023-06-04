@@ -50,7 +50,7 @@ const HeroCard = () => {
           }
           navigation={true}
           autoplay={{
-            delay: 2500,
+            delay: 1000,
             disableOnInteraction: true,
           }}
           pagination={{ clickable: true }}

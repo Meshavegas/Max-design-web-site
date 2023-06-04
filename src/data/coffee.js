@@ -12,7 +12,7 @@ export const coffees = [
       "Carte personnel",
       "Carte visite Recto Verso",
     ],
-    lien: "https://wa.me/237677899380?text=J%27ai+sur+votre+site+et+j%27ai+vu+ceci.+Et+j%27aimerais+savoir+comment+faire+pour+avoir+exemplaire",
+    lien: "https://wa.me/237677899380?text=Cher+Max+Design%2C+j%27aimerais+*commander+un+service+carte+visite+professionnel*+.+Merci+de+me+guider+sur+le+processus%2C+les+tarifs+et+d%C3%A9lais.+Impatient+de+collaborer+avec+votre+talent+artistique.+Merci+%21+http%3A%2F%2Fmax-design-cm.web.app%2F",
   },
 
   {
@@ -27,7 +27,7 @@ export const coffees = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       "Impression sur rollUp",
     ],
-    lien: "https://wa.me/237677899380?text=J%27ai+sur+votre+site+et+j%27ai+vu+ceci.+Et+j%27aimerais+savoir+comment+faire+pour+avoir+exemplaire",
+    lien: "https://wa.me/237677899380?text=Cher+Max+Design%2C+j%27aimerais+*commander+un+service+d%27impression+professionnel*+.+Merci+de+me+guider+sur+le+processus%2C+les+tarifs+et+d%C3%A9lais.+Impatient+de+collaborer+avec+votre+talent+artistique.+Merci+%21+http%3A%2F%2Fmax-design-cm.web.app%2F",
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ export const coffees = [
       "https://firebasestorage.googleapis.com/v0/b/max-design-cm.appspot.com/o/Impression%2FFLYER-2023.jpg?alt=media&token=d8bdf85c-3bc8-48d8-b86c-a7fb13bfaf0b",
     price: 500,
     description: ["Lorem ipsum dolor sit amet consectetur adipisicing elit."],
-    lien: "https://wa.me/237677899380?text=J%27ai+sur+votre+site+et+j%27ai+vu+ceci.+Et+j%27aimerais+savoir+comment+faire+pour+avoir+exemplaire",
+    lien: "https://wa.me/237677899380?text=Cher+Max+Design%2C+j%27aimerais+*commander+un+service+d%27infographie*+.+Merci+de+me+guider+sur+le+processus%2C+les+tarifs+et+d%C3%A9lais.+Impatient+de+collaborer+avec+votre+talent+artistique.+Merci+%21+http%3A%2F%2Fmax-design-cm.web.app%2F",
   },
   {
     id: 5,
@@ -49,6 +49,6 @@ export const coffees = [
       "https://firebasestorage.googleapis.com/v0/b/max-design-cm.appspot.com/o/shooting%2FSans-titre-1.jpg?alt=media&token=6783d2ea-40b6-4046-8c57-4b2e5cdba333",
     price: 500,
     description: ["Lorem ipsum dolor sit amet consectetur adipisicing elit."],
-    lien: "https://wa.me/237677899380?text=J%27ai+sur+votre+site+et+j%27ai+vu+ceci.+Et+j%27aimerais+savoir+comment+faire+pour+avoir+exemplaire",
+    lien: "https://wa.me/237677899380?text=Cher+Max+Design%2C+j%27aimerais+*commander+un+shooting+photo+professionnel*+.+Merci+de+me+guider+sur+le+processus%2C+les+tarifs+et+d%C3%A9lais.+Impatient+de+collaborer+avec+votre+talent+artistique.+Merci+%21+http%3A%2F%2Fmax-design-cm.web.app%2F ",
   },
 ];

@@ -34,34 +34,4 @@ export const imagesCards = [
     width: 4,
     height: 3,
   },
-  {
-    src: "https://firebasestorage.googleapis.com/v0/b/max-design-cm.appspot.com/o/shooting%2FSans-titre-1.jpg?alt=media&token=6783d2ea-40b6-4046-8c57-4b2e5cdba333",
-    width: 4,
-    height: 3,
-  },
-  {
-    src: "https://firebasestorage.googleapis.com/v0/b/max-design-cm.appspot.com/o/shooting%2Ffyf.jpg?alt=media&token=f0699082-aaa2-4d6a-a597-6fb4ca03d54d",
-    width: 4,
-    height: 3,
-  },
-  {
-    src: "https://firebasestorage.googleapis.com/v0/b/max-design-cm.appspot.com/o/shooting%2Fert.jpg?alt=media&token=b4438257-aa5c-4bf0-b09d-4d0b3ba28195",
-    width: 6,
-    height: 3,
-  },
-  {
-    src: "https://firebasestorage.googleapis.com/v0/b/max-design-cm.appspot.com/o/infographie%2FFETE-DU-TRAVAIL.jpg?alt=media&token=477e5f5a-ac2b-41d8-a3f1-d450e72685cf",
-    width: 4,
-    height: 3,
-  },
-  {
-    src: "https://firebasestorage.googleapis.com/v0/b/max-design-cm.appspot.com/o/infographie%2FFlyer-D%C3%A9cembre-01.jpg?alt=media&token=c608d83e-0ec7-439d-bdfc-e4b86d35118d",
-    width: 4,
-    height: 3,
-  },
-  {
-    src: "https://firebasestorage.googleapis.com/v0/b/max-design-cm.appspot.com/o/infographie%2Fpromo-Saint-valentin.jpg?alt=media&token=234008ab-8dc6-4756-9e94-160e04621c6c",
-    width: 4,
-    height: 3,
-  },
 ];

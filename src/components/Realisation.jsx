@@ -35,10 +35,75 @@ const Realisation = () => {
 
   return (
     <div>
-      <Gallery photos={imagesCards} onClick={openLightbox} />
-      <ModalGateway>
+      {/* <Gallery photos={imagesCards} onClick={openLightbox} /> */}
+      <div className="container">
+        <div className="pl-4 bg-orange w-full">
+          <h1 className="decoration-double font-bold text-xl md:text-2xl lg:text-4xl text-white border-b-4 pb-0 border-light">
+            Shooting
+          </h1>
+          <div className="h-50 flex mt-2 w-full overflow-x-auto">
+            {imagesCards.map((item, index) => {
+              return (
+                <div
+                  key={index}
+                  onClick={() => openLightbox(null, { photo: item, index })}
+                  className="mr-1 w-100"
+                >
+                  <img
+                    src={item.src}
+                    className="w-full aspect-square object-cover"
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        <div className="pl-4 bg-light mt-2">
+          <h1 className="font-bold text-xl md:text-2xl lg:text-4xl text-white border-b-4 pb-0 border-orange">
+            Carte de visite
+          </h1>
+          <div className="h-50 flex mt-2">
+            {imagesCards.map((item, index) => {
+              return (
+                <div
+                  key={index}
+                  onClick={() => openLightbox(null, { photo: item, index })}
+                  className="mr-1 w-100"
+                >
+                  <img
+                    src={item.src}
+                    className="w-full aspect-square object-cover"
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        <div className="pl-4 bg-orange mt-2 pb-2">
+          <h1 className="font-bold text-xl md:text-2xl lg:text-4xl text-white border-b-4 pb-0 border-light">
+            Impression
+          </h1>
+          <div className="flex mt-2">
+            {imagesCards.map((item, index) => {
+              return (
+                <div
+                  key={index}
+                  onClick={() => openLightbox(null, { photo: item, index })}
+                  className="mr-1 w-100"
+                >
+                  <img
+                    src={item.src}
+                    className="w-full aspect-square object-cover"
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+      <ModalGateway className="z-50">
         {viewerIsOpen ? (
-          <Modal onClose={closeLightbox}>
+          <Modal onClose={closeLightbox} className="z-50">
             <Carousel
               currentIndex={currentImage}
               views={imagesCards.map((x) => ({

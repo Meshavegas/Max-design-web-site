@@ -99,3 +99,13 @@ body {
   opacity: 0.5;
   cursor: not-allowed;
 }
+.progress-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: "#ec008c";
+  transform-origin: 0%;
+  z-index: 9999;
+}

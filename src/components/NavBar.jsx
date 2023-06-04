@@ -20,11 +20,11 @@ export const NavBar = () => {
   const currentRoute = window.location.pathname;
 
   return (
-    <div className="sticky top-0 w-full bg-light h-[80px] z-50">
+    <div className="sticky top-0 w-full bg-light h-[80px] z-40">
       <div className="flex justify-between items-center h-full px-4">
         <h1 className="flex items-center text-lg font-bold underline underline-offset-8 text-white">
-          <a href="/" className="bg-white">
-            <img src={logo} alt="logo" className="h-20 w-24" />
+          <a href="/">
+            <img src={logo} alt="logo" className="w-24" />
           </a>
         </h1>
         <ul className="hidden md:flex items-center gap-4">
@@ -69,7 +69,7 @@ export const NavBar = () => {
         </div>
       </div>
       {isOpen && (
-        <div className="bg-light p-4 z-50 absolute w-full md:hidden  ">
+        <div className="bg-light p-4 z-40 absolute w-full md:hidden  ">
           <ul className=" flex flex-col items-start gap-4">
             {navLinks.map(({ name, to }) => (
               <li
