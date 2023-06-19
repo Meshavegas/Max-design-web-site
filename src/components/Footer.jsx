@@ -11,7 +11,7 @@ const socials = [
 
 export const Footer = () => {
   return (
-    <div className="w-full px-4 flex items-start gap-4 flex-col md:items-center md:flex-row  justify-between mt-6 bg-light   h-24">
+    <div className="w-full px-4 flex items-center gap-4 flex-col md:items-center md:flex-row md:justify-between justify-center   mt-6 bg-light  ">
       <div className="flex items-center">
         <h1 className="text-white text-md font-bold underline underline-offset-8 ">
           <a href="/">

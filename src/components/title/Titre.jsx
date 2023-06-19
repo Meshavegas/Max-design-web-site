@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 
 import { useInView } from "react-intersection-observer";
@@ -7,6 +7,7 @@ import { useEffect } from "react";
 const Titre = ({ titre }) => {
   const control = useAnimation();
   const [ref, inView] = useInView();
+  const [screenSize, setScreenSize] = useState(window.screen.width);
 
   const boxVariant = {
     visible: {
@@ -20,10 +21,14 @@ const Titre = ({ titre }) => {
   };
 
   useEffect(() => {
-    if (inView) {
-      control.start("visible");
+    if (screenSize > 700) {
+      if (inView) {
+        control.start("visible");
+      } else {
+        control.start("hidden");
+      }
     } else {
-      control.start("hidden");
+      control.start("visible");
     }
   }, [control, inView]);
 
@@ -35,7 +40,7 @@ const Titre = ({ titre }) => {
       initial="hidden"
       variants={boxVariant}
     >
-      <h1 className="text-dark-grey font-bold text-lg  py-3 md:text-6xl">
+      <h1 className="text-dark-grey font-bold text-4xl  py-3 md:text-6xl">
         {titre}
       </h1>
     </motion.div>

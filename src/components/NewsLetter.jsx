@@ -24,15 +24,21 @@ export const NewsLetter = () => {
             Tout belle histoire commence pas un petit message.
           </p>
           <input
-            placeholder="Enter your name"
+            placeholder="Entez votre nom"
             type="text"
-            className="form-input px-4 mb-3 py-3 rounded-xl w-full border-2  border-orange focus:border-none focus:outline-none"
+            className="form-input px-4 mb-3 py-3 rounded-xl w-full border-2  border-orange focus:border-none focus:outline-light"
           />
           <input
-            placeholder="Enter your email"
+            placeholder="Entez votre adresse mail"
             type="text"
-            className="form-input px-4 py-3 rounded-xl w-full border-2  border-orange focus:border-none focus:outline-none"
+            className="form-input px-4 py-3 rounded-xl w-full border-2  border-orange focus:border-none focus:outline-light"
           />
+          <textarea
+            placeholder="Entez votre message"
+            type="text"
+            className="mt-3 form-input px-4 py-3 rounded-xl w-full border-2  border-orange focus:border-none focus:outline-light"
+          />
+
           <button className="bg-orange text-white p-3 rounded-xl px-4 uppercase w-full mt-4">
             Envoyer
           </button>

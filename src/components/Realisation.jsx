@@ -6,7 +6,7 @@ import "react-medium-image-zoom/dist/styles.css";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
 import ImageMagnify from "react-image-magnify";
-// import Modal from "react-modal";
+
 import { imagesCards } from "../data/photo";
 
 const Realisation = () => {
@@ -26,9 +26,19 @@ const Realisation = () => {
     console.log(data);
     return (
       <div className="flex justify-center align-middle h-full ">
-        <Zoom>
-          <img src={data.src} className=" h-full object-contain	" />
-        </Zoom>
+        <div className=" text-white z-50">
+          <div
+            onClick={closeLightbox}
+            className="absolute text-right bg-orange md:px-4 md:py-2 px-3 py-1 rounded-full cursor-pointer ml-2"
+          >
+            X
+          </div>
+
+          <img
+            src={data.src}
+            className=" h-auto object-contain aspect-[4/3] max-w-full"
+          />
+        </div>
       </div>
     );
   };
@@ -37,7 +47,7 @@ const Realisation = () => {
     <div>
       {/* <Gallery photos={imagesCards} onClick={openLightbox} /> */}
       <div className="container">
-        <div className="pl-4 bg-orange w-full">
+        <div className="md:mx-0 mx-2 pl-2 bg-orange ">
           <h1 className="decoration-double font-bold text-xl md:text-2xl lg:text-4xl text-white border-b-4 pb-0 border-light">
             Shooting
           </h1>
@@ -58,7 +68,7 @@ const Realisation = () => {
             })}
           </div>
         </div>
-        <div className="pl-4 bg-light mt-2">
+        <div className="md:mx-0 mx-2 pl-2 bg-light mt-2">
           <h1 className="font-bold text-xl md:text-2xl lg:text-4xl text-white border-b-4 pb-0 border-orange">
             Carte de visite
           </h1>
@@ -79,7 +89,7 @@ const Realisation = () => {
             })}
           </div>
         </div>
-        <div className="pl-4 bg-orange mt-2 pb-2">
+        <div className="md:mx-0 mx-2 pl-2 bg-orange mt-2 pb-2 w-full">
           <h1 className="font-bold text-xl md:text-2xl lg:text-4xl text-white border-b-4 pb-0 border-light">
             Impression
           </h1>
@@ -103,7 +113,9 @@ const Realisation = () => {
       </div>
       <ModalGateway className="z-50">
         {viewerIsOpen ? (
-          <Modal onClose={closeLightbox} className="z-50">
+          <Modal className="z-50">
+            {/* <div className="text-2xl">X</div> */}
+
             <Carousel
               currentIndex={currentImage}
               views={imagesCards.map((x) => ({

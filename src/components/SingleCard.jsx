@@ -16,22 +16,27 @@ const Card = ({ title, image, description, price, rating, reviews, lien }) => {
       scale: 1,
       y: 0,
       x: 0,
-      transition: { duration: 0.3 },
+      transition: { duration: 0.6 },
     },
-    hidden: { opacity: 1, scale: 0, y: 200, x: -200 },
+    hidden: { opacity: 0, scale: 0, y: 200, x: -200 },
   };
 
   useEffect(() => {
-    if (inView) {
-      control.start("visible");
+    if (screenSize > 700) {
+      console.log(screenSize);
+      if (inView) {
+        control.start("visible");
+      } else {
+        control.start("hidden");
+      }
     } else {
-      control.start("hidden");
+      control.start("visible");
     }
   }, [control, inView]);
 
   return (
     <motion.div
-      className="px-10 py-10 relative w-full bg-light-100 flex flex-row"
+      className="px-2 py-10 relative w-full bg-light-100 flex flex-row"
       animate={control}
       ref={ref}
       initial="hidden"
@@ -71,11 +76,11 @@ const Card = ({ title, image, description, price, rating, reviews, lien }) => {
         <div className="flex justify-center my-2 flex-wrap">
           <a
             href="#contact"
-            className="w-full md:w-[45%] bg-orange text-white p-3 rounded-lg px-4 uppercase flex hover:bg-light"
+            className="w-full md:w-[45%] bg-orange text-white p-3 rounded-lg px-4 uppercase flex hover:bg-light justify-between"
             target="_blank"
           >
             {" "}
-            Commander par mail <BiMailSend className="w-full h-full md:w-12" />
+            Commander par mail <BiMailSend className="w-12 h-12 md:w-12" />
           </a>
           <a
             href={lien}
@@ -83,7 +88,7 @@ const Card = ({ title, image, description, price, rating, reviews, lien }) => {
             target="_blank"
           >
             Commander par whatsApp
-            <ImWhatsapp className="w-15 h-full md:w-full" />
+            <ImWhatsapp className="w-12 h-12 md:w-12" />
           </a>
         </div>
       </div>

@@ -3,11 +3,16 @@
 @tailwind utilities;
 
 html,
-body {
-  margin: 0;
-  padding: 0;
+body,
+#root {
   scroll-behavior: smooth;
   box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  /* Prevents overflow on the x-axis */
+  overflow-x: hidden;
 }
 
 .swiper-button-next,
@@ -99,13 +104,14 @@ body {
   opacity: 0.5;
   cursor: not-allowed;
 }
+
 .progress-bar {
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
   right: 0;
-  height: 10px;
-  background: "#ec008c";
+  height: 5px;
+  background: #ec008c;
   transform-origin: 0%;
   z-index: 9999;
 }
