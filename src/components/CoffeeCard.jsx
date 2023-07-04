@@ -8,16 +8,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import { coffees } from "../data/coffee";
-import { RatingDisplay } from "./RatingDisplay";
 import Card from "./SingleCard";
 import { motion, useAnimation } from "framer-motion";
 
 import { useInView } from "react-intersection-observer";
 
-export const CoffeeCard = () => {
-  const [state, setState] = useState(null);
-
+export const CoffeeCard = ({ state }) => {
   const [screenSize, setScreenSize] = useState(window.screen.width);
   const control = useAnimation();
   const [ref, inView] = useInView();
@@ -32,6 +28,7 @@ export const CoffeeCard = () => {
     },
     hidden: { opacity: 0, scale: 0, y: 200, x: -200 },
   };
+  console.log(state);
 
   useEffect(() => {
     if (inView) {
@@ -50,11 +47,7 @@ export const CoffeeCard = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, [screenSize]);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setState(coffees);
-    }, 1000);
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <motion.div
@@ -73,7 +66,7 @@ export const CoffeeCard = () => {
               : screenSize >= 768 && screenSize < 1024
               ? 2
               : screenSize <= 1024
-              ? 3
+              ? 2
               : 3
           }
           navigation={true}
@@ -87,7 +80,7 @@ export const CoffeeCard = () => {
         >
           {state.map((coffee, index) => (
             <SwiperSlide key={index + coffee?.title}>
-              <Card {...coffee} />
+              <Card {...coffee} key={index} />
             </SwiperSlide>
           ))}
         </Swiper>

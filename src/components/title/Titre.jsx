@@ -15,13 +15,13 @@ const Titre = ({ titre }) => {
       scale: 1,
       y: 0,
       x: 0,
-      transition: { duration: 0.3 },
+      transition: { duration: 0.2 },
     },
     hidden: { opacity: 1, scale: 0, y: 200, x: -200 },
   };
 
   useEffect(() => {
-    if (screenSize > 700) {
+    if (screenSize > 400) {
       if (inView) {
         control.start("visible");
       } else {
@@ -34,13 +34,13 @@ const Titre = ({ titre }) => {
 
   return (
     <motion.div
-      className="box"
+      className="box my-3"
       animate={control}
       ref={ref}
       initial="hidden"
       variants={boxVariant}
     >
-      <h1 className="text-dark-grey font-bold text-4xl  py-3 md:text-6xl">
+      <h1 className="text-dark-grey font-bold text-4xl md:text-6xl border-b-4 border-orange">
         {titre}
       </h1>
     </motion.div>

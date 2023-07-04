@@ -9,10 +9,10 @@ const ProjectNumber = ({ number }) => {
   const [ref, inView] = useInView();
   useEffect(() => {
     if (inView) {
-      const animation = animate(count, number, { duration: 6 });
+      const animation = animate(count, number, { duration: 15 });
       return animation.stop;
     } else {
-      const animation = animate(count, number, { duration: 6 });
+      const animation = animate(count, number, { duration: 15 });
       return animation.stop;
     }
   }, [inView]);

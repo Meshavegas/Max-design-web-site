@@ -1,4 +1,4 @@
-export const images = [
+const images = [
   {
     id: 1,
     url: "https://firebasestorage.googleapis.com/v0/b/max-design-cm.appspot.com/o/couverture%2F02.jpg?alt=media&token=d120e479-955d-42f0-8837-2a66e712aa74",

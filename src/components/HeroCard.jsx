@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper";
@@ -8,11 +8,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import { images } from "../data/images";
 import Loader from "./loader/Loader";
-const HeroCard = () => {
-  const [state, setState] = useState(null);
-
+const HeroCard = ({ state }) => {
   const [screenSize, setScreenSize] = useState(window.screen.width);
 
   useEffect(() => {
@@ -25,10 +22,11 @@ const HeroCard = () => {
   }, [screenSize]);
 
   useEffect(() => {
-    setTimeout(() => {
-      setState(images);
-    }, 1000);
+    // setTimeout(() => {
+    //   setState(images);
+    // }, 4000);
   }, []);
+  // useCallback(() => {}, []);
 
   return (
     <div
@@ -40,18 +38,20 @@ const HeroCard = () => {
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           loop={true}
-          spaceBetween={10}
+          spaceBetween={5}
           slidesPerView={
             screenSize < 768
               ? 1
               : screenSize >= 768 && screenSize < 1024
               ? 1
+              : screenSize <= 1024
+              ? 1
               : 1
           }
-          navigation={true}
+          navigation={false}
           autoplay={{
-            delay: 1000,
-            disableOnInteraction: true,
+            delay: 5000,
+            disableOnInteraction: false,
           }}
           pagination={{ clickable: true }}
           onSlideChange={() => console.log("slide change")}
@@ -70,15 +70,11 @@ const HeroCard = () => {
   );
 };
 
-const Card = ({ url, id, price, rating, reviews }) => {
+const Card = ({ img, id }) => {
   return (
-    <div className="relative w-full  screen h-full bg-light-100">
-      <img src={url} alt={id} className="w-full" />
-      {/* <h1 className="md:text-center absolute h-28 lg:bottom-1/2 mx-1 text-2xl font-bold bg-light opacity-80 text-white align-middle flex justify-center">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur quam,
-        nam aspernatur veritatis fuga deleniti exercitationem animi aliquam
-        similique obcaecati.
-      </h1> */}
+    <div className="w-full   h-full bg-light">
+      <img src={img} alt={id} className="w-full" />
+      <span className=" bg-light text-light">{"k"}</span>
     </div>
   );
 };
